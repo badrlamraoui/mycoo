@@ -8,27 +8,4 @@
       "maxDuration": 30
     }
   },
-  "env": {
-    "NEXTAUTH_URL": {
-      "description": "NextAuth URL (set to https://your-domain.vercel.app)"
-    },
-    "NEXTAUTH_SECRET": {
-      "description": "NextAuth secret (run: openssl rand -base64 32)"
-    },
-    "DATABASE_URL": {
-      "description": "PostgreSQL connection string"
-    },
-    "GITHUB_ID": {
-      "description": "GitHub OAuth App ID"
-    },
-    "GITHUB_SECRET": {
-      "description": "GitHub OAuth App Secret"
-    },
-    "GOOGLE_ID": {
-      "description": "Google OAuth App ID"
-    },
-    "GOOGLE_SECRET": {
-      "description": "Google OAuth App Secret"
-    }
-  }
 }
