@@ -13,7 +13,8 @@ html {
 }
 
 body {
-  @apply bg-slate-900 text-slate-100 font-sans;
+  background-color: #0f172a;
+  color: #f1f5f9;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -22,13 +23,22 @@ body {
 }
 
 a {
-  @apply text-blue-500 hover:text-blue-400 transition-colors;
+  color: #3b82f6;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #60a5fa;
 }
 
 button {
-  @apply transition-all duration-200;
+  transition: all 0.2s;
 }
 
 .container {
-  @apply max-w-7xl mx-auto px-4;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
