@@ -94,7 +94,7 @@ export default function Dashboard() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
           <Link key={project.id} href={`/projects/${project.id}`}>
-            <div className="p-6 bg-secondary rounded-lg border border-slate-700 hover:border-accent hover:shadow-lg transition-all cursor-pointer h-full">
+            <div className="p-6 bg-slate-800 rounded-lg border border-slate-700 hover:border-blue-500 hover:shadow-lg transition-all cursor-pointer h-full">
               <div className="flex items-start justify-between mb-4">
                 <h2 className="text-xl font-bold text-white">{project.name}</h2>
                 <span
@@ -123,7 +123,7 @@ export default function Dashboard() {
         ))}
       </div>
 
-      <div className="mt-12 p-6 bg-secondary rounded-lg border border-slate-700">
+      <div className="mt-12 p-6 bg-slate-800 rounded-lg border border-slate-700">
         <h2 className="text-lg font-bold mb-3">🚀 Next Steps</h2>
         <ul className="space-y-2 text-sm text-slate-300">
           <li>✅ Phase 1: Foundation (Auth, Dashboard, DB) — In Progress</li>

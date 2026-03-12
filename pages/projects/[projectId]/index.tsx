@@ -61,11 +61,11 @@ export default function ProjectDetail() {
     return (
       <div className="container py-12">
         <div className="mb-8">
-          <Link href="/dashboard" className="text-accent hover:text-blue-400">
+          <Link href="/dashboard" className="text-blue-500 hover:text-blue-400">
             ← Back to Dashboard
           </Link>
         </div>
-        <div className="p-6 bg-secondary rounded-lg border border-slate-700">
+        <div className="p-6 bg-slate-800 rounded-lg border border-slate-700">
           <h1 className="text-2xl font-bold text-white">Project Brief Template</h1>
           <p className="text-slate-400 mt-4">This project awaits a brief. Add project details to get started.</p>
         </div>
@@ -87,15 +87,15 @@ export default function ProjectDetail() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-        <div className="p-6 bg-secondary rounded-lg border border-slate-700">
+        <div className="p-6 bg-slate-800 rounded-lg border border-slate-700">
           <h3 className="text-sm font-semibold text-slate-300 uppercase">Status</h3>
-          <p className="text-2xl font-bold text-accent mt-2">{project.status}</p>
+          <p className="text-2xl font-bold text-blue-500 mt-2">{project.status}</p>
         </div>
       </div>
 
       <div className="space-y-6 mb-8">
         {project.sections.map((section: any, idx: number) => (
-          <div key={idx} className="p-6 bg-secondary rounded-lg border border-slate-700">
+          <div key={idx} className="p-6 bg-slate-800 rounded-lg border border-slate-700">
             <h2 className="text-xl font-bold mb-3">{section.title}</h2>
             <p className="text-slate-300">{section.content}</p>
           </div>
@@ -103,12 +103,12 @@ export default function ProjectDetail() {
       </div>
 
       {project.nextSteps && (
-        <div className="p-6 bg-secondary rounded-lg border border-slate-700">
+        <div className="p-6 bg-slate-800 rounded-lg border border-slate-700">
           <h2 className="text-xl font-bold mb-4">Next Steps</h2>
           <ol className="space-y-2 text-slate-300">
             {project.nextSteps.map((step: string, idx: number) => (
               <li key={idx} className="flex gap-3">
-                <span className="flex-shrink-0 font-bold text-accent">{idx + 1}.</span>
+                <span className="flex-shrink-0 font-bold text-blue-500">{idx + 1}.</span>
                 <span>{step}</span>
               </li>
             ))}

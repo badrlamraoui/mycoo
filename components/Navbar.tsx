@@ -7,9 +7,9 @@ export default function Navbar() {
   const router = useRouter()
 
   return (
-    <nav className="fixed top-0 w-full bg-secondary border-b border-slate-700 z-50">
+    <nav className="fixed top-0 w-full bg-slate-800 border-b border-slate-700 z-50">
       <div className="container flex items-center justify-between h-16">
-        <Link href="/dashboard" className="text-xl font-bold text-accent hover:text-blue-400">
+        <Link href="/dashboard" className="text-xl font-bold text-blue-500 hover:text-blue-400">
           MyCOO
         </Link>
 

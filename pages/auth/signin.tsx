@@ -14,14 +14,14 @@ export default function SignIn() {
   }, [session, router])
 
   return (
-    <div className="min-h-screen bg-primary flex items-center justify-center">
+    <div className="min-h-screen bg-slate-900 flex items-center justify-center">
       <div className="w-full max-w-md p-8">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-accent mb-2">MyCOO</h1>
+          <h1 className="text-4xl font-bold text-blue-500 mb-2">MyCOO</h1>
           <p className="text-slate-400">Chief Operating Officer Agent</p>
         </div>
 
-        <div className="bg-secondary border border-slate-700 rounded-lg p-8">
+        <div className="bg-slate-800 border border-slate-700 rounded-lg p-8">
           <h2 className="text-2xl font-bold mb-6 text-center">Sign In</h2>
 
           <button
