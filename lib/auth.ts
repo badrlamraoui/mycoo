@@ -1,6 +1,18 @@
 import type { NextAuthOptions } from 'next-auth'
+import type { JWT } from 'next-auth/jwt'
 import GitHubProvider from 'next-auth/providers/github'
 import GoogleProvider from 'next-auth/providers/google'
+
+declare module 'next-auth' {
+  interface Session {
+    user?: {
+      id?: string
+      name?: string | null
+      email?: string | null
+      image?: string | null
+    }
+  }
+}
 
 export const authOptions: NextAuthOptions = {
   providers: [
