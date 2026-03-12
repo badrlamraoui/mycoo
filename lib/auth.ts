@@ -1,37 +1,34 @@
 import type { NextAuthOptions } from 'next-auth'
 import GitHubProvider from 'next-auth/providers/github'
 import GoogleProvider from 'next-auth/providers/google'
-import { PostgresAdapter } from '@next-auth/pg-adapter'
-import { Pool } from 'pg'
-
-// Database connection pool for NextAuth
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-})
 
 export const authOptions: NextAuthOptions = {
-  adapter: PostgresAdapter(pool),
   providers: [
     GitHubProvider({
       clientId: process.env.GITHUB_ID || '',
       clientSecret: process.env.GITHUB_SECRET || '',
-      allowDangerousEmailAccountLinking: true,
     }),
     GoogleProvider({
       clientId: process.env.GOOGLE_ID || '',
       clientSecret: process.env.GOOGLE_SECRET || '',
-      allowDangerousEmailAccountLinking: true,
     }),
   ],
+  session: {
+    strategy: 'jwt',
+    maxAge: 30 * 24 * 60 * 60, // 30 days
+  },
   callbacks: {
-    async session({ session, user }) {
+    async jwt({ token, user, account }) {
+      if (user) {
+        token.id = user.id
+      }
+      return token
+    },
+    async session({ session, token }) {
       if (session.user) {
-        session.user.id = user.id
+        session.user.id = token.id as string
       }
       return session
-    },
-    async signIn({ user, account }) {
-      return true
     },
   },
   pages: {
