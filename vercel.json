@@ -1,0 +1,41 @@
+{
+  "buildCommand": "next build",
+  "devCommand": "next dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "functions": {
+    "pages/api/**": {
+      "maxDuration": 30
+    }
+  },
+  "env": [
+    {
+      "key": "NEXTAUTH_URL",
+      "description": "NextAuth URL (set to https://your-domain.vercel.app)"
+    },
+    {
+      "key": "NEXTAUTH_SECRET",
+      "description": "NextAuth secret (run: openssl rand -base64 32)"
+    },
+    {
+      "key": "DATABASE_URL",
+      "description": "PostgreSQL connection string"
+    },
+    {
+      "key": "GITHUB_ID",
+      "description": "GitHub OAuth App ID"
+    },
+    {
+      "key": "GITHUB_SECRET",
+      "description": "GitHub OAuth App Secret"
+    },
+    {
+      "key": "GOOGLE_ID",
+      "description": "Google OAuth App ID"
+    },
+    {
+      "key": "GOOGLE_SECRET",
+      "description": "Google OAuth App Secret"
+    }
+  ]
+}
