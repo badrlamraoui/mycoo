@@ -7,5 +7,5 @@
     "pages/api/**": {
       "maxDuration": 30
     }
-  },
+  }
 }
