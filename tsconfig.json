@@ -10,7 +10,6 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "isolation": "module",
     "noImplicitAny": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
