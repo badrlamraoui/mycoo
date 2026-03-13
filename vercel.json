@@ -7,8 +7,5 @@
     "pages/api/**": {
       "maxDuration": 30
     }
-  },
-  "protectionBypass": {
-    "enableTokens": false
   }
 }
