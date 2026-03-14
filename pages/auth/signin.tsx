@@ -33,7 +33,9 @@ export default function SignIn() {
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-2 mb-4">
             <div className="p-3 rounded-xl bg-gradient-to-br from-blue-600 to-blue-700">
-              <BarChart3 size={28} className="text-white" />
+              <div className="w-7 h-7 flex items-center justify-center">
+                <BarChart3 size={28} className="text-white" />
+              </div>
             </div>
             <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               MyCOO
@@ -53,7 +55,9 @@ export default function SignIn() {
               onClick={() => signIn('github')}
               className="w-full px-4 py-3 rounded-lg bg-gradient-to-r from-slate-700 to-slate-700 hover:from-slate-600 hover:to-slate-600 border border-slate-600 text-white font-medium transition-all flex items-center justify-center gap-2 group hover:shadow-lg hover:shadow-slate-600/20"
             >
-              <Github size={20} />
+              <span className="w-5 h-5 flex items-center justify-center flex-shrink-0">
+                <Github size={20} />
+              </span>
               <span>Sign in with GitHub</span>
             </button>
 
@@ -61,7 +65,9 @@ export default function SignIn() {
               onClick={() => signIn('google')}
               className="w-full px-4 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 border border-blue-500 text-white font-medium transition-all flex items-center justify-center gap-2 group hover:shadow-lg hover:shadow-blue-600/30"
             >
-              <Chrome size={20} />
+              <span className="w-5 h-5 flex items-center justify-center flex-shrink-0">
+                <Chrome size={20} />
+              </span>
               <span>Sign in with Google</span>
             </button>
           </div>
@@ -89,7 +95,9 @@ export default function SignIn() {
             return (
               <div key={idx} className="p-4 rounded-lg bg-gradient-to-r from-slate-800/30 to-slate-800/10 border border-slate-700/30 backdrop-blur-sm flex items-center gap-3 hover:border-blue-600/30 transition-all">
                 <div className="p-2 rounded-lg bg-gradient-to-br from-blue-600/20 to-cyan-600/20">
-                  <Icon size={16} className="text-blue-400" />
+                  <div className="w-4 h-4 flex items-center justify-center">
+                    <Icon size={16} className="text-blue-400" />
+                  </div>
                 </div>
                 <span className="text-sm text-slate-300">{feature.text}</span>
               </div>
